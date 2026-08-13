@@ -64,13 +64,13 @@
   @media (max-width:840px){ .hero .wrap{grid-template-columns:1fr; padding-top:48px;} }
   .hero h1{font-size:clamp(38px,5.4vw,60px); margin:14px 0 18px;}
   .hero .lede{font-size:18px; color:var(--muted); max-width:46ch; margin-bottom:30px;}
-  .tags{
-    display:flex; flex-wrap:wrap; align-items:baseline; gap:0;
-    margin-bottom:34px; padding-top:14px; border-top:1px dashed var(--line);
-    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.03em; color:var(--ink);
+  .tags{display:flex; flex-wrap:wrap; align-items:center; gap:9px 8px; margin-bottom:34px;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.04em; text-transform:uppercase;
+    line-height:1; color:var(--ink); background:rgba(184,134,59,.07); border:1px solid var(--brass-dim);
+    padding:8px 13px; border-radius:999px; transition:background-color .15s ease, border-color .15s ease;
   }
-  .tag{color:var(--ink);}
-  .tag:not(:last-child)::after{content:"·"; color:var(--brass); margin:0 10px; font-weight:600;}
+  .tag:hover{background:rgba(184,134,59,.15); border-color:var(--brass);}
   .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
   .btn{
     display:inline-flex; align-items:center; gap:8px;
