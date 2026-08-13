@@ -95,7 +95,8 @@
     background:var(--brass);
   }
   .badge-photo{width:100%; aspect-ratio:4/5; overflow:hidden; border:1px solid var(--line);}
-  .badge-photo img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(6%);}
+  .badge-photo img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(6%); transition:transform .4s ease, filter .4s ease;}
+  .badge:hover .badge-photo img{transform:scale(1.04); filter:grayscale(0%);}
   .badge-strip{
     display:flex; justify-content:space-between; align-items:center;
     margin-top:14px; padding-top:14px; border-top:1px dashed var(--line);
@@ -117,7 +118,8 @@
   /* VALUES CARDS */
   .cards3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
   @media (max-width:840px){ .cards3{grid-template-columns:1fr;} }
-  .vcard{background:var(--card); border:1px solid var(--line); padding:26px 24px; display:flex; flex-direction:column; gap:14px;}
+  .vcard{background:var(--card); border:1px solid var(--line); padding:26px 24px; display:flex; flex-direction:column; gap:14px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+  .vcard:hover{transform:translateY(-3px); box-shadow:0 16px 32px -20px rgba(30,43,39,.3); border-color:var(--brass-dim);}
   .vcard .vtag{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--teal);}
   .vcard h3{font-size:20px; margin-top:2px;}
   .dial{display:flex; align-items:baseline; gap:6px; margin-top:4px;}
@@ -134,7 +136,8 @@
 
   /* EXPERIENCE */
   .exp-list{border-top:1px solid var(--line);}
-  .exp-item{padding:22px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:200px 1fr; gap:20px;}
+  .exp-item{padding:22px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:200px 1fr; gap:20px; transition:background-color .25s ease, padding-left .25s ease;}
+  .exp-item:hover{background:rgba(184,134,59,.06); padding-left:10px;}
   @media (max-width:720px){ .exp-item{grid-template-columns:1fr; gap:6px;} }
   .exp-meta{display:flex; flex-direction:column; gap:4px;}
   .exp-date{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--brass);}
